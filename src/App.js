@@ -6,7 +6,7 @@ import InputSample from './InputSample';
 import './App.css';
 
 function App() {
-  const name='react';
+  const name='윤정인';
   const style = {
     backgroundColor: 'black',
     color: 'aqua',
@@ -20,7 +20,7 @@ function App() {
       <Hello name="react" color="red" isSpecial={true}/>
       <Hello color="pink"/>
       <div style={style}>{name}</div>
-      <div className="gray-box"></div>
+      <div className="color-box"></div>
     </Wrapper>
     <Counter/>
     <InputSample/>
