@@ -1,5 +1,14 @@
 import React from "react";
 
+function User({ user }){
+    return (
+        <div>
+            <b>{user.username}</b> <br/>
+            <span>({user.email})</span>
+        </div>
+    );
+}
+
 function UserList(){
     const users = [
         {
@@ -22,20 +31,11 @@ function UserList(){
 
 return (
     <div>
-        <div>
-            <b>{users[0].username}</b> <br/>
-            <span>{users[0].email}</span>
-        </div>
-        <div>
-            <b>{users[1].username}</b> <br/>
-            <span>{users[1].email}</span>
-        </div>
-        <div>
-            <b>{users[2].username}</b> <br/>
-            <span>{users[2].email}</span>
-        </div>
+        {users.map(user => (
+            <User user={user} key={user.id}/>
+        ))}
     </div>
-)
+);
 }
 
 export default UserList;
